@@ -1,0 +1,1 @@
+docker run --runtime=nvidia --rm -it --ipc=host -u $(id -u ${USER}):$(id -g ${USER}) -v /etc/passwd:/etc/passwd -v /etc/group:/etc/group -e TORCH_HOME=/models/torchvision -v $(pwd)/models:/models -v $(pwd)/data:/data xtreme-view
