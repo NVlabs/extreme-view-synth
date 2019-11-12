@@ -7,6 +7,7 @@ Extreme View Synthesis by Inchang Choi, Orazio Gallo, Alejandro Troccoli, Min H.
 ## License
 
 Copyright (C) 2019 NVIDIA Corporation.  All rights reserved.
+
 Licensed under the [NVIDIA Source Code License](LICENSE.md)
 
 ## Pre-requisites
@@ -58,6 +59,7 @@ Run the extreme view code generation:
 
 ```
 python run_xtreme.view.py /data/0000 --input_views=6,8
+```
 
 This will run the extreme view synthesis code using images 6 and 8 of the sequence /data/0000. The virtual camera locations are set in the code that match those we used in the paper. You can modify the code to use different virtual cameras.
 
