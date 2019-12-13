@@ -1,8 +1,14 @@
-# Extreme-View Synthesis
+# Extreme View Synthesis
 
-This repository contains the code for the paper:
+<p align="center">
+  <img src="evs.gif"/></p>
 
-Extreme View Synthesis by Inchang Choi, Orazio Gallo, Alejandro Troccoli, Min H. Kim and Jan Kautz, in Proceedings of International Conference on Computer Vision (ICCV) 2019.
+#### [Paper](https://arxiv.org/abs/1812.04777) | [Extended Presentation at GTC 2019](https://developer.nvidia.com/gtc/2019/video/S9576) (requires free registration) | [Latex citation](#citation)
+
+Code for the paper:  
+**Extreme View Synthesis**  
+[Inchang Choi](http://www.inchangchoi.info/), [Orazio Gallo](http://alumni.soe.ucsc.edu/~orazio/), [Alejandro Troccoli](https://research.nvidia.com/person/alejandro-troccoli), [Min H. Kim](http://vclab.kaist.ac.kr/minhkim/) and [Jan Kautz](http://jankautz.com/), IEEE International Conference on Computer Vision, 2019 (Oral).
+
 
 ## License
 
@@ -12,7 +18,7 @@ Licensed under the [NVIDIA Source Code License](LICENSE.md)
 
 ## Pre-requisites
 
-For convinience, we provide a Dockerfile to build a container image to run the code. The image will contain the Python dependencies and a build of COLMAP.
+For convenience, we provide a Dockerfile to build a container image to run the code. The image will contain the Python dependencies and a build of COLMAP.
 
 Your system will need:
 
@@ -71,6 +77,18 @@ You can run COLMAP and the extreme view synthesis on all the sample sequences:
 ```
 
 The results are stored in the sequence directory under ```xtreme-view```. For example, for ```data/0000``` you will find the results in the directory ```data/0000/xtreme-view```. The initial view synthesis is located under ```output``` and the the refined one under ```refinement```.
+
+## <a name="citation"></a> Citation
+If you find this code useful in your research or fun project, please consider citing the paper:
+```
+@inproceedings{extremeview,  
+  title={Extreme View Synthesis},  
+  author={Choi, Inchang and Gallo, Orazio and Troccoli, Alejandro and Kim, Min H and Kautz, Jan},  
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},  
+  pages={7781--7790},  
+  year={2019}  
+}
+```
 
 ## Open Source licenses
 
