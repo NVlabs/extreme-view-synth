@@ -27,20 +27,20 @@ RUN apt-get update && apt-get -y install \
 
 RUN git clone https://ceres-solver.googlesource.com/ceres-solver && \
     cd ceres-solver && \
-    git checkout $(git describe --tags) && \
+    git checkout 1.14.0 && \
     mkdir build && \
     cd build && \
     cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF && \
-    make && \
+    make -j8 && \
     make install
 
 RUN git clone https://github.com/colmap/colmap.git && \
     cd colmap && \
-    git checkout $(git describe --tags) && \
+    git checkout 3.5 && \
     mkdir build && \
     cd build && \
-    cmake -DCUDA_ARCHS="5.2 6.0 6.1 7.0 7.5+PTX" .. && \
-    make && \
+    cmake .. -DCUDA_ARCHS="5.2 6.0 6.1 7.0 7.5+PTX" && \
+    make -j8 && \
     make install
 
 # Install xtreme-view dependencies
