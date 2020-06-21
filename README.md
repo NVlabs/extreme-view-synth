@@ -22,9 +22,11 @@ For convenience, we provide a Dockerfile to build a container image to run the c
 
 Your system will need:
 
-1. [NVIDIA Docker](https://github.com/NVIDIA/nvidia-docker/wiki)
+1. Docker (>= 19.03)
 
-2. NVIDIA GPU driver 418 or later.
+2. [NVIDIA Docker](https://github.com/NVIDIA/nvidia-docker/wiki)
+
+3. NVIDIA GPU driver 418 or later.
 
 Build the container image:
 
@@ -64,7 +66,7 @@ Run COLMAP on a sequence of images to get the camera parameters:
 Run the extreme view code generation:
 
 ```
-python run_xtreme.view.py /data/0000 --input_views=6,8
+python run_xtreme_view.py /data/0000 --input_views=6,8
 ```
 
 This will run the extreme view synthesis code using images 6 and 8 of the sequence /data/0000. The virtual camera locations are set in the code that match those we used in the paper. You can modify the code to use different virtual cameras.
