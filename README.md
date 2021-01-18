@@ -1,13 +1,10 @@
 # Extreme View Synthesis
 
-<p align="center">
-  <img src="evs.gif"/></p>
-
 #### [Paper](https://arxiv.org/abs/1812.04777) | [Extended Presentation at GTC 2019](https://developer.nvidia.com/gtc/2019/video/S9576) (requires free registration) | [Latex citation](#citation)
 
 Code for the paper:  
 **Extreme View Synthesis**  
-[Inchang Choi](http://www.inchangchoi.info/), [Orazio Gallo](http://alumni.soe.ucsc.edu/~orazio/), [Alejandro Troccoli](https://research.nvidia.com/person/alejandro-troccoli), [Min H. Kim](http://vclab.kaist.ac.kr/minhkim/) and [Jan Kautz](http://jankautz.com/), IEEE International Conference on Computer Vision, 2019 (Oral).
+[Inchang Choi](http://www.inchangchoi.info/), [Orazio Gallo](https://oraziogallo.github.io/), [Alejandro Troccoli](https://research.nvidia.com/person/alejandro-troccoli), [Min H. Kim](http://vclab.kaist.ac.kr/minhkim/) and [Jan Kautz](http://jankautz.com/), IEEE International Conference on Computer Vision, 2019 (Oral).
 
 
 ## License
@@ -34,22 +31,20 @@ Build the container image:
 docker build -t xtreme-view .
 ```
 
-## Download the models and sample data
+## Download the models
 
-You can download the models and the sample data from the NVIDIA GPU CLOUD registry using the provided scripts:
+You can download the models from the NVIDIA GPU CLOUD registry using:
 
 
 ```
 ./download_model.sh
 ```
 
-Please contact the authors about availability of the sample data. If you have your own sequence of images, you can create a directory tree with root ```data```, followed by a directory per sequence, e.g. ```data/0000```, and place all images in the sequence into the ```data/0000/images``` sub-directory.
 
-
-After downloading the models and acquiring data, you should have a ```models``` and a ```data``` folders.
 
 ## Running the code
 
+Place your sequence of images in a directory tree with root ```data```, followed by a directory per sequence, e.g., ```data/0000```, and place all images in the sequence into the ```data/0000/images``` sub-directory.
 
 Launch the container using the provided script:
 
@@ -69,7 +64,7 @@ Run the extreme view code generation:
 python run_xtreme_view.py /data/0000 --input_views=6,8
 ```
 
-This will run the extreme view synthesis code using images 6 and 8 of the sequence /data/0000. The virtual camera locations are set in the code that match those we used in the paper. You can modify the code to use different virtual cameras.
+This will run the extreme view synthesis code using images 6 and 8 of the sequence /data/0000. You can modify the code to use different virtual cameras.
 
 You can run COLMAP and the extreme view synthesis on all the sample sequences:
 
